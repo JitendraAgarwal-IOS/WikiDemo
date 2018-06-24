@@ -33,6 +33,7 @@ class WikiSearchCell: UITableViewCell {
                 self.lblTitle.text = objPages.title
                 self.lblDesc.text = objPages.terms?.desItems![0]
                 
+                self.imgView.image = UIImage(named: "noImage")
                 if let _ = objPages.thumbnail {
                     imgView.setImage(withURL: URL(string: (objPages.thumbnail?.imgURL!)!)!, placeHolderImageNamed: "noImage", andImageTransition: .crossDissolve(0.4))
                 }
